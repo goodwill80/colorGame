@@ -8,7 +8,19 @@ var colors = [
 ];
 
 var squares = document.querySelectorAll(".square");
+var pickedColor = colors[3];
+var colorDisplay = document.getElementById("colorDisplay");
+
+colorDisplay.textContent = pickedColor;
 
 for(var i = 0; i < colors.length; i++) {
   squares[i].style.background = colors[i];
-}
+  squares[i].addEventListener("click", function(){
+    var clickedColor = this.style.background;
+    if (clickedColor === pickedColor){
+      alert("correct");
+    } else {
+      this.style.background = "#232324";
+    }
+});
+};
