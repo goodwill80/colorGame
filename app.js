@@ -6,7 +6,19 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var reset = document.querySelector("#reset");
+var easy = document.getElementById("easy");
+var hard = document.getElementById("hard");
 colorDisplay.textContent = pickedColor;
+
+easy.addEventListener("click", function(){
+  this.classList.add("selected");
+  hard.classList.remove("selected");
+});
+
+hard.addEventListener("click", function(){
+  this.classList.add("selected");
+  easy.classList.remove("selected");
+})
 
 reset.addEventListener("click", function(){
   colors = generateRandomColors(6);
