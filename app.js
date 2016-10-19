@@ -12,9 +12,12 @@ reset.addEventListener("click", function(){
   colors = generateRandomColors(6);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
-  for (var i = 0; i < colors.length; i++) {
+  for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
   }
+  messageDisplay.textContent = " ";
+  h1.style.background = "#232323";
+  reset.textContent = "New Colors";
 });
 
 for ( var i = 0; i < colors.length; i++ ) {
@@ -25,6 +28,7 @@ for ( var i = 0; i < colors.length; i++ ) {
         messageDisplay.textContent = "That's correct!";
         h1.style.background = pickedColor;
         changeColors(clickedColor);
+        reset.textContent = "Play again!";
     } else {
       this.style.background = "#232324";
       messageDisplay.textContent = "Try again!";
