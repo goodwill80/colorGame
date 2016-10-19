@@ -13,11 +13,31 @@ colorDisplay.textContent = pickedColor;
 easy.addEventListener("click", function(){
   this.classList.add("selected");
   hard.classList.remove("selected");
+  colors = generateRandomColors(3);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+  for(var i = 0; i < squares.length; i++) {
+    if(colors[i]){
+      squares[i].style.background = colors[i];
+    } else {
+      squares[i].style.display = "none";
+    }
+  }
+    messageDisplay.textContent = " ";
 });
 
 hard.addEventListener("click", function(){
   this.classList.add("selected");
   easy.classList.remove("selected");
+  colors = generateRandomColors(6);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+  for(var i = 0; i < squares.length; i++) {
+    if(colors[i]){
+      squares[i].style.background = colors[i];
+    }
+  }
+    messageDisplay.textContent = " ";
 })
 
 reset.addEventListener("click", function(){
