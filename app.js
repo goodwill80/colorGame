@@ -54,38 +54,6 @@ function resetFunction(){
   reset.textContent = "New Colors";
 }
 
-// easy.addEventListener("click", function(){
-//   this.classList.add("selected");
-//   hard.classList.remove("selected");
-//   numOfSquares = 3;
-//   colors = generateRandomColors(numOfSquares);
-//   pickedColor = pickColor();
-//   colorDisplay.textContent = pickedColor;
-//   for(var i = 0; i < squares.length; i++) {
-//     if(colors[i]){
-//       squares[i].style.background = colors[i];
-//     } else {
-//       squares[i].style.display = "none";
-//     }
-//   }
-//     messageDisplay.textContent = " ";
-// });
-//
-// hard.addEventListener("click", function(){
-//   this.classList.add("selected");
-//   easy.classList.remove("selected");
-//   numOfSquares = 6;
-//   colors = generateRandomColors(numOfSquares);
-//   pickedColor = pickColor();
-//   colorDisplay.textContent = pickedColor;
-//   for(var i = 0; i < squares.length; i++) {
-//     if(colors[i]){
-//       squares[i].style.background = colors[i];
-//       squares[i].style.display = "block";
-//     }
-//   }
-//     messageDisplay.textContent = " ";
-// })
 function setUpResetListeners(){
 reset.addEventListener("click", function(){
   resetFunction();
@@ -138,3 +106,38 @@ function randomColor(){
   var b = Math.floor(Math.random() * 256);
   return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
+
+//Prior to refactored
+// easy.addEventListener("click", function(){
+//   this.classList.add("selected");
+//   hard.classList.remove("selected");
+//   numOfSquares = 3;
+//   colors = generateRandomColors(numOfSquares);
+//   pickedColor = pickColor();
+//   colorDisplay.textContent = pickedColor;
+//   for(var i = 0; i < squares.length; i++) {
+//     if(colors[i]){
+//       squares[i].style.background = colors[i];
+//     } else {
+//       squares[i].style.display = "none";
+//     }
+//   }
+//     messageDisplay.textContent = " ";
+// });
+//
+// hard.addEventListener("click", function(){
+//   this.classList.add("selected");
+//   easy.classList.remove("selected");
+//   numOfSquares = 6;
+//   colors = generateRandomColors(numOfSquares);
+//   pickedColor = pickColor();
+//   colorDisplay.textContent = pickedColor;
+//   for(var i = 0; i < squares.length; i++) {
+//     if(colors[i]){
+//       squares[i].style.background = colors[i];
+//       squares[i].style.display = "block";
+//     }
+//   }
+//     messageDisplay.textContent = " ";
+// })
