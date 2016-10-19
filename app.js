@@ -52,7 +52,7 @@ reset.addEventListener("click", function(){
     squares[i].style.background = colors[i];
   }
   messageDisplay.textContent = " ";
-  h1.style.background = "#232323";
+  h1.style.background = "steelblue";
   reset.textContent = "New Colors";
 });
 

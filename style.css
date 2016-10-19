@@ -1,9 +1,16 @@
 body {
   background-color: #232323;
+  margin: 0;
+  font-family: "Montserrat", "Avenir";
 }
 
 h1 {
   color: white;
+  font-weight: normal;
+  text-align: center;
+  background: steelblue;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .square {
@@ -28,4 +35,8 @@ h1 {
   height: 30px;
   text-align: center;
   color: black;
+}
+
+#colorDisplay {
+  font-size: 200%;
 }
